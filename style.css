@@ -18,6 +18,17 @@ body {
     box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("game main page.jpg");
+  background-size: cover;      /* Makes it cover the whole screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+
 /* Button Styling */
 #play-btn {
     background: none;             /* No background */
