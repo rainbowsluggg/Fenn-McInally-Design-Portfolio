@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden; /* Prevents the page from scrolling */
+}
+
+/* Start Menu Styles */
+#start-menu {
+    display: block;
+    background-color: #c80815;  /* Start screen background color */
+    color: white;
+    padding: 50px;
+    height: 100vh;  /* Full screen height */
+    box-sizing: border-box;
+}
+
+/* Button Styling */
+#play-btn {
+    background: none;             /* No background */
+    color: white;                 /* White text */
+    border: none;                 /* No border */
+    font-size: 48px;              /* Larger text */
+    font-weight: bold;            /* Make the text bold */
+    padding: 20px 40px;           /* Add padding around the text */
+    cursor: pointer;             /* Pointer cursor on hover */
+    transition: transform 0.2s ease, color 0.3s ease;  /* Smooth transition for transform and color */
+}
+
+/* Hover Effect */
+#play-btn:hover {
+    color: #f1f1f1;               /* Slightly lighter text color */
+    transform: scale(1.1);         /* Slightly enlarge the button */
+}
+
+/* Game Content Styles */
+#game-content {
+    display: none;
+    background-color: #202020;  /* Game screen background color */
+    color: white;
+    padding: 50px;
+    height: 100vh;  /* Full screen height */
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Moving Words Container */
+#moving-words {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    transform: translateY(-50%); /* Center the container vertically */
+    width: 100%;  /* Fill the screen width */
+    animation: scrollWords 30s linear infinite; /* Move over 30 seconds, adjust for faster/slower scroll */
+}
+
+/* Moving Words (Buttons) */
+.moving-word {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 24px;
+    padding: 10px 20px;
+    margin: 0 20px;
+    border: 2px solid transparent; /* Add transparent border to create space for hover effect */
+    cursor: pointer;
+    white-space: nowrap; /* Prevents the text from wrapping */
+    transition: all 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+/* Hover Effect for the Buttons */
+.moving-word:hover {
+    color: black; /* Change text color to black */
+    background-color: white; /* Optional: Change background color on hover */
+    border: 2px solid white; /* Add white border on hover */
+}
+
+
+/* Keyframes for Continuous Scrolling */
+@keyframes scrollWords {
+    0% {
+        transform: translateX(0); /* Start from the left */
+    }
+    100% {
+        transform: translateX(-200%); /* Move completely off the screen to the left */
+    }
+}
+
+/* Additional styles for the image */
+#image-placeholder {
+    text-align: center;
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+}
+
+#hover-image {
+    max-width: 100%;  /* Make sure the image scales to the container width */
+    height: auto;     /* Maintain the aspect ratio */
+}
