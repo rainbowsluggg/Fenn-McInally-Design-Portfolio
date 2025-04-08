@@ -1,5 +1,9 @@
 /* General Styles */
 body {
+    background-image: url("game main page.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
     text-align: center;
     background-image: ("game main page.jpg");
